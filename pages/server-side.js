@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { client } from './_app';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
       query Countries {
